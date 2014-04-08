@@ -1,8 +1,8 @@
 //
-//  PlayerTableViewController.h
+//  PanStoppedViewController.h
 //  footballtest
 //
-//  Created by Brad on 2/19/14.
+//  Created by Brad on 2/20/14.
 //  Copyright (c) 2014 Brad. All rights reserved.
 //
 
@@ -10,11 +10,11 @@
 #import "Player.h"
 #import "PlayerView.h"
 
-@interface PlayerTableViewController : UITableViewController
+@interface PanStoppedViewController : UITableViewController
 
 @property (strong,nonatomic) Player *player;
 @property (weak,nonatomic) PlayerView *playerView;
 
--(void)reloadTableViewBasedOnPlayerState;
+
 
 @end

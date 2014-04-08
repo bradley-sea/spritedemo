@@ -31,6 +31,7 @@
     for (Player *player in team.offense)
     {
             PlayerView *playerView = [PlayerView new];
+        playerView.isOnOffense = YES;
             playerView.player = player;
             float x =  [[self.xPosDict objectForKey:player.position ] floatValue];
         float y = [[self.yPosDict objectForKey:player.position ] floatValue];
@@ -46,6 +47,7 @@
         for (Player *player in team.defense)
         {
             PlayerView *playerView = [PlayerView new];
+            playerView.isOnOffense = NO;
             playerView.player = player;
             float x =  [[self.xPosDict objectForKey:player.position ] floatValue];
             float y = [[self.yPosDict objectForKey:player.position ] floatValue];
@@ -53,6 +55,7 @@
             [self formatDefensePlayerView:playerView];
             playerView.numberLabel.text = player.number;
             [view addSubview:playerView];
+            playerView.originalPosition = playerView.center;
             [onScreenViews addObject:playerView];
         }
 
@@ -77,7 +80,7 @@
 {
     //playerView.layer.borderWidth = 3;
     //playerView.layer.borderColor = [[UIColor redColor] CGColor];
-    playerView.layer.shadowOffset =CGSizeMake(3, 3);
+    playerView.layer.shadowPath = [UIBezierPath bezierPathWithRect:playerView.bounds].CGPath;
     playerView.layer.shadowColor = [UIColor blackColor].CGColor;
     playerView.layer.shadowOpacity = .6;
     //playerView.backgroundColor = [UIColor colorWithRed:231.0/255.0 green:76.0/255.0 blue:60.0/255.0 alpha:1.0];

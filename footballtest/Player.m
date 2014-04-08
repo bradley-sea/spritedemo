@@ -23,6 +23,7 @@
         self.team  = team;
         self.number = number;
         self.depth = depth;
+        self.routeInfo = [NSMutableArray new];
     }
     
     return self;

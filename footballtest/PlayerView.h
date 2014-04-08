@@ -13,6 +13,14 @@
 
 @property (strong,nonatomic) Player *player;
 @property (strong,nonatomic) UILabel *numberLabel;
+@property (nonatomic) CGPoint originalPosition;
+@property (nonatomic) BOOL isTracing;
+@property (nonatomic) CGPoint originalCenter;
+@property (nonatomic) BOOL isOnOffense;
+
+
+
+
 
 
 

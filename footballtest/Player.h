@@ -17,6 +17,11 @@
 @property (strong,nonatomic) NSString *number;
 @property (strong,nonatomic) NSNumber *depth;
 
+@property (strong,nonatomic) NSMutableArray *routeInfo;
+@property (nonatomic) BOOL routeFinished;
+
+
+
 
 -(id)initWithFirstName:(NSString *)first LastName:(NSString *)last Position:(NSString *)position Team:(NSString*)team Number:(NSString *)number Depth:(NSNumber *)depth;
 
